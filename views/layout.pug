@@ -1,0 +1,36 @@
+doctype html
+html(lang='en' dir='ltr')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title
+      block title
+        | Portfolio Site
+    link(href='https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700,800', rel='stylesheet')
+    link(rel='stylesheet', href='/static/css/normalize.css')
+    link(rel='stylesheet', href='/static/css/styles.css')
+
+  body
+    //- Sidebar with a short introduction, shown on every page
+    #my-info.sidebar
+      .sidebar-info-box
+        br
+        .thumbnail-box
+          img.thumbnail(src='/static/images/profile.png', alt='Profile picture of Jesus Colina')
+        .dev-intro-box
+          h5 Jesus Colina
+          p I’ve loved figuring out computers since I was a kid. Now I build web apps with JavaScript, Node.js and Express, and I’m always learning something new.
+          a(href='/about') Learn More &rarr;
+
+    .wrapper
+      //- Header that only shows on mobile layouts
+      .header
+        .header-info-box
+          button#menu-icon.menu-icon(type='button' data-toggle='my-info' aria-label='Show or hide the sidebar')
+          span Jesus Colina
+
+      //- Each page fills in its own content here
+      block content
+
+    script(src='/static/js/script.js')

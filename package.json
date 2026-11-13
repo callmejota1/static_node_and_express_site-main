@@ -1,0 +1,19 @@
+{
+  "name": "static-node-express-portfolio",
+  "version": "1.0.0",
+  "description": "A portfolio site built with Node.js, Express and Pug",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0",
+    "pug": "^3.0.4"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

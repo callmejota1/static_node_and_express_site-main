@@ -1,0 +1,47 @@
+extends layout.pug
+
+block title
+  | About | Portfolio Site
+
+block content
+
+  nav.nav
+    a(href='/')
+      span &larr;
+      |  Back
+
+  article.portfolio-about
+    .inner-wrapper.flex-row-wrap.two-col
+      .about-intro-box.box
+        h1 Jesus Colina
+        p Full Stack JavaScript Developer
+
+        .about-bio
+          p I've been curious about computers since I was a kid, always poking around to figure out how things worked. That curiosity grew into a love for programming, because code lets me take a problem and build my own solution to it, which never stops being fun. I'm drawn to the tech world as a whole, and I'm happiest when I'm learning something new. Through the Treehouse Full Stack JavaScript Techdegree, I've built a random quote generator, a searchable student directory, an interactive registration form, an object-oriented word game and an employee directory powered by a public API. I'm looking for a team where I can keep building, keep learning, and help solve real problems.
+
+      .skills-contact-box.box
+        h6 Skills
+        ul
+          li HTML
+          li CSS
+          li JavaScript
+          li Git and GitHub
+          li VS Code
+          li Accessibility
+          li OOP
+          li Fetch and Public APIs
+          li Node.js
+          li Express
+          li Pug
+
+        h6 Contact Info
+        ul
+          li name@example.com
+
+        a.btn-link(href='https://www.linkedin.com', target='_blank', rel='noopener noreferrer') LinkedIn
+        a.btn-link(href='https://github.com', target='_blank', rel='noopener noreferrer') GitHub
+
+    nav.nav
+      a(href='/')
+        span &larr;
+        |  Back

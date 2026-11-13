@@ -1,0 +1,16 @@
+extends layout.pug
+
+block title
+  | Error #{status} | Portfolio Site
+
+block content
+
+  nav.nav
+    a(href='/')
+      span &larr;
+      |  Back to Home
+
+  article.portfolio-about
+    .about-intro-box.box
+      h1= status === 404 ? 'Page Not Found' : 'Something Went Wrong'
+      p= message

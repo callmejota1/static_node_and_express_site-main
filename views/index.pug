@@ -1,0 +1,20 @@
+extends layout.pug
+
+block title
+  | Home | Portfolio Site
+
+block content
+
+  article.portfolio-intro
+    h1 Hey, Potential Employers!
+    p This portfolio is a collection of the projects I have built while learning full stack JavaScript. Each one shows a different skill, from working with the DOM and public APIs to object-oriented programming and a Node.js server. Take a look around, and let's talk.
+
+  article.portfolio-project-thumbs
+    .projects-box.box.grid
+
+      //- One thumbnail for every project in data.json, linking to its project page
+      each project in projects
+        .cell
+          a(href=`/project/${project.id}`)
+            img.thumbnail(src=project.image_urls[0], alt=`Thumbnail of ${project.project_name}`)
+            h5= project.project_name

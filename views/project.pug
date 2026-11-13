@@ -1,0 +1,38 @@
+extends layout.pug
+
+block title
+  | #{project.project_name} | Portfolio Site
+
+block content
+
+  nav.nav
+    a(href='/')
+      span &larr;
+      |  Back
+
+  article.portfolio-projects
+    .inner-wrapper.flex-row-wrap.two-col
+      .project-info-box.box
+        h1= project.project_name
+        p= project.description
+
+      .project-tech-links-box.box
+        h6 Technologies
+        ul
+          each technology in project.technologies
+            li= technology
+
+        a.btn-link(href=project.live_link, target='_blank', rel='noopener noreferrer') Live Demo
+        a.btn-link(href=project.github_link, target='_blank', rel='noopener noreferrer') GitHub Repo
+
+    .project-img-box.box
+
+      
+      each image, index in project.image_urls.slice(1)
+        - const alt = (project.image_alts && project.image_alts[index]) || `Screenshot ${index + 1} of the ${project.project_name} project`
+        img.project-img(src=image, alt=alt)
+
+    nav.nav
+      a(href='/')
+        span &larr;
+        |  Back
